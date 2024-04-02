@@ -19,13 +19,13 @@ export default function Welcome() {
                         <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                             Welcome to <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Hustlers</mark>
                         </h1> 
-                        {/* <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 pt-2">
+                        <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 pt-2">
   Join us for a week of innovation, learning, and fun! Participate in various events, workshops,
   and competitions.
     <span className="inline-block align-top">
     <AnimatedTooltipPreview />
   </span>
-</p> */}
+</p>
 
 
                     </div>
