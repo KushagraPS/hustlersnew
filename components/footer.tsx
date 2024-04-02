@@ -10,14 +10,14 @@ import { MdOutlineAlternateEmail, MdOutlineLocalPhone } from "react-icons/md";
 export default function Footer() {
   return (
     <footer className="flex flex-col gap-2 sm:flex-row p-5 w-full shrink-0 items-center px-6 md:px-6 border-t mb-20 sm:mb-5 ">
-      <p className=" text-gray-500 dark:text-gray-400">© 2024 TECHNOSPARX | AIT TechFest. All rights reserved.</p>
+      <p className=" text-gray-500 dark:text-gray-400">© 2024 PEDALSTART | All rights reserved.</p>
       <nav className="sm:ml-auto flex gap-2 sm:gap-2 sm:flex-row flex-row">
         <h1>Design & Developed By{' '}
         <Drawer>
           <DrawerTrigger asChild>
             {/* <Button variant="orange">Details</Button> */}
             <Link className="font-extrabold hover:underline underline-offset-4 bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent" 
-            href="#">Krish Panchani</Link>
+            href="#">Kushagra Sharma</Link>
           </DrawerTrigger>
           <DrawerContent>
             <div className="mx-auto w-full max-w-sm">
@@ -68,13 +68,9 @@ export default function Footer() {
           </DrawerContent>
         </Drawer>
         </h1>
-        <h1>& Contributed By {' '}
+       
         <Drawer>
-          <DrawerTrigger asChild>
-            {/* <Button variant="orange">Details</Button> */}
-            <Link className="font-extrabold hover:underline underline-offset-4 bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent" 
-            href="#"> Meet Katarmal</Link>
-          </DrawerTrigger>
+        
           <DrawerContent>
             <div className="mx-auto w-full max-w-sm">
               <DrawerHeader>
@@ -123,7 +119,7 @@ export default function Footer() {
             </div>
           </DrawerContent>
         </Drawer>
-            </h1>
+            
       </nav>
     </footer>
   )

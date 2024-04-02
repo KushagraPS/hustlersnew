@@ -3,67 +3,91 @@
 //  * @see https://v0.dev/t/WZxZWb4JsdT
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+
 import Link from "next/link"
 import { JSX, SVGProps } from "react"
 import img1 from "@/app/assets/img1.jpeg"
 import { Skeleton } from "./ui/skeleton"
 import Welcome from "./content/welcome"
-import Schedule from "./content/schedule"
+
+
+import Scheduleoff from "./content/scheduleoff"
+import Scheduleon from "./content/scheduleon"
+
 import Venue from "./content/venue"
+import { AnimatedPinDemo, AnimatedTooltipPreview, BentoGridThirdDemo, CardHoverEffectDemo, FollowingPointerDemo, TypewriterEffectSmoothDemo } from "@/app/(main)/(routes)/events/page"
+import { AnimatedTooltip } from "./content/animated-tooltip"
+
 
 
 export default function Component() {
   return (
-    <div className="flex flex-col min-h-[100vh]">
+    <div className="flex flex-col min-h-screen bg-#0b0a09">
       <main className="flex-1">
-        <Welcome />
-        <Schedule />
-        {/* <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                    Registration
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Register for TechFest 2024</h2>
-                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Fill out the form below to register for the event. We cant wait to see you there!
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <div className="space-y-1">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" required />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" required type="email" />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" required />
-                  </div>
-                  <Button className="w-full" type="submit">
-                    Register
-                  </Button>
-                </div>
-              </div>
-              <div className="flex flex-col items-start space-y-4">
-                <img
-                  alt="TechFest"
-                  className="mx-auto aspect-[2/1] overflow-hidden rounded-t-xl object-cover"
-                  height="300"
-                  src="/placeholder.svg"
-                  width="500"
-                />
-              </div>
-            </div>
-          </div>
-        </section> */}
-        <Venue />
-      </main>
+        <Welcome /> 
+        
+        <TypewriterEffectSmoothDemo></TypewriterEffectSmoothDemo>
+        <h1 className="text-center pl-15 lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+          Recent <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Updates</mark>
+        </h1>
+        <br />
+        <br />
+        <div className="flex justify-center">
+          <ul className="flex flex-wrap justify-center list-none">
+            {[...Array(4)].map((_, index) => (
+              <li key={index} className="m-2">
+                <FollowingPointerDemo />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <br />
+        <br />
+        <div className="flex justify-center">
+          <ul className="flex flex-wrap justify-center list-none">
+            {[...Array(4)].map((_, index) => (
+              <li key={index} className="m-2">
+                <FollowingPointerDemo />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex justify-center items-center h-20">
+          <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
+            Explore More
+          </button>
+        </div>
 
+        <div className="flex justify-center items-center">
+          <div>
+            <h1 className="text-center lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+              About <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Hustlers</mark>
+            </h1>
+            <br />
+            <br />
+            <BentoGridThirdDemo />
+          </div>
+        </div>
+
+        <Scheduleoff />
+        <Scheduleon />
+        <h1 className="text-center lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+          Tools <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Section</mark>
+        </h1>
+        <CardHoverEffectDemo />
+        <h1 className="text-center lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+          Resources <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Section</mark>
+        </h1>
+        <div className="flex justify-center">
+          <ul className="flex flex-wrap justify-center list-none">
+            {[...Array(3)].map((_, index) => (
+              <li key={index} className="m-2">
+                <AnimatedPinDemo />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </main>
     </div>
   )
 }

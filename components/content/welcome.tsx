@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Skeleton } from '../ui/skeleton'
 import { Image } from "@nextui-org/react";
+import { AnimatedTooltipPreview } from '@/app/(main)/(routes)/events/page';
 
 export default function Welcome() {
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -16,12 +17,17 @@ export default function Welcome() {
                 <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-5 md:grid-cols-2 md:gap-16 justify-center items-center">
                     <div>
                         <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                            Welcome to <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">TECHNOSPARX</mark> 2024
-                        </h1>
-                        <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 pt-2">
-                            Join us for a week of innovation, learning, and fun! Participate in various tech events, workshops,
-                            and competitions.
-                        </p>
+                            Welcome to <mark className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Hustlers</mark>
+                        </h1> 
+                        {/* <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 pt-2">
+  Join us for a week of innovation, learning, and fun! Participate in various events, workshops,
+  and competitions.
+    <span className="inline-block align-top">
+    <AnimatedTooltipPreview />
+  </span>
+</p> */}
+
+
                     </div>
                     <div className="flex flex-col items-start space-y-4">
                         {!imageLoaded && <Skeleton className="w-64 h-32 rounded-md mx-auto aspect-[2/1]" />}
@@ -29,7 +35,7 @@ export default function Welcome() {
                             // width={700}
                             disableSkeleton={false}
                             className={`rounded-lg drop-shadow-xl mx-auto w-full  overflow-hidden rounded-t-xl object-cover ${!imageLoaded ? 'hidden' : ''}`}
-                            src={"poster_final.png"}
+                            src={"https://pedalstart.com/startup/images/2023-08-3.jpg"}
                             alt=""
                             onLoad={handleImageLoad}
                         />

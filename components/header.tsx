@@ -29,7 +29,9 @@ export default function Header() {
   const menuItems = [
     { label: "Home", path: "/", isActive: pathname === "/" },
     { label: "Events", path: "/events", isActive: pathname === "/events" },
-    { label: "Schedule", path: "/#schedule", isActive: pathname === "/#schedule" },
+    { label: "Tools", path: "/Tools", isActive: pathname === "/Tools" },
+    { label: "Resources", path: "/Resources", isActive: pathname === "/Resources" },
+   
     // { label: "Venue", path: "/#venue", isActive: pathname === "/#venue" },
     // { label: "Contact", path: "/#Venue", isActive: pathname === "/#Venue" }
   ];
@@ -52,7 +54,7 @@ export default function Header() {
                 width={170}
                 disableSkeleton={false}
                 className="drop-shadow-xl pl-2" 
-                src={"TECHNO_final.svg"} 
+                src={"https://join.pedalstart.com/src/2021/05/logo.png"} 
                 alt="" 
                 onLoad={handleImageLoad}
               />
