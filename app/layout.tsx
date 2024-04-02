@@ -9,24 +9,24 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hustlers | PedalStart ",
-  description: "Join us for an exciting techfest at Ahmedabad Institute of Technology! Explore a wide range of technical and non-technical events, including workshops, hackathons, guest lectures, and much more. Don't miss this opportunity to showcase your skills, learn from industry experts, and connect with like-minded individuals. Register now and be a part of the ultimate tech extravaganza!",
-  keywords: ['AIT', 'TECHFEST 2024', 'TECHNOSPARX', 'Ahmedabad'],
-  authors: [{ name: 'Krish Panchani', url: 'https://github.com/Krish-Panchani' }],
-  creator: 'Krish Panchani',
-  publisher: 'Krish Panchani',
+  description: "Hustlers is a platform of micro communities",
+  keywords: ['HUSTLERS', 'PEDALSTART', 'FOUNDERS', 'DELHI'],
+  authors: [{ name: 'PedalStart', url: '' }],
+  creator: 'Kushagra SHarma',
+  publisher: 'PedalStart',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: 'TECHNOSPARX | AIT TechFest 2024',
-    description: 'Join us for an exciting techfest at Ahmedabad Institute of Technology! Explore a wide range of technical and non-technical events, including workshops, hackathons, guest lectures, and much more. Don\'t miss this opportunity to showcase your skills, learn from industry experts, and connect with like-minded individuals. Register now and be a part of the ultimate tech extravaganza!',
-    url: 'https://aitfest.thunderdevelops.in',
-    siteName: 'TECHNOSPARX | AIT TechFest 2024',
+    title: 'HUSTLERS | PEDALSTART',
+    description: 'Hustlers is a platform of micro communities',
+    url: '',
+    siteName: '',
     images: [
       {
-        url: 'https://aitfest.thunderdevelops.in/apple-touch-icon.png',
+        url: '',
       },
     ],
     locale: 'en_US',
