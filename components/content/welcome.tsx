@@ -22,7 +22,6 @@ export default function Welcome() {
                         <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 pt-2">
   Join us for a week of innovation, learning, and fun! Participate in various events, workshops,
   and competitions.
-<<<<<<< HEAD
   <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 ;" style={{ paddingTop: '10px' }}>
   <button 
   className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm"
@@ -34,11 +33,9 @@ export default function Welcome() {
      
     </div>
 
-=======
     <span className="inline-block align-top">
     <AnimatedTooltipPreview />
   </span>
->>>>>>> fc47cd2134ffbeaa040aad1a06a3b023cf556511
 </p>
 
 

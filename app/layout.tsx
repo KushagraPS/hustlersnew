@@ -11,24 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hustlers | PedalStart ",
-<<<<<<< HEAD
-  description: "",
+ 
   keywords: [''],
   authors: [{ }],
   creator: '',
   publisher: '',
-=======
-  description: "Hustlers is a platform of micro communities",
-  keywords: ['HUSTLERS', 'PEDALSTART', 'FOUNDERS', 'DELHI'],
-  authors: [{ name: 'PedalStart', url: '' }],
-  creator: 'Kushagra SHarma',
-  publisher: 'PedalStart',
->>>>>>> fc47cd2134ffbeaa040aad1a06a3b023cf556511
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+ 
   openGraph: {
     title: 'HUSTLERS | PEDALSTART',
     description: 'Hustlers is a platform of micro communities',
