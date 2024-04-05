@@ -1,7 +1,7 @@
 // app/providers.tsx
-'use client'
+'use client';
 
-import {NextUIProvider} from '@nextui-org/react'
+import { NextUIProvider } from '@nextui-org/react';
 import {
   ContextMenu,
   ContextMenuContent,
@@ -10,28 +10,27 @@ import {
   ContextMenuRadioGroup,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from "@/components/ui/context-menu"
-import { Separator } from '@/components/ui/separator'
+} from '@/components/ui/context-menu';
+import { Separator } from '@/components/ui/separator';
 
-export function Providers({children}: { children: React.ReactNode }) {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ContextMenu>
-        <ContextMenuTrigger>
-    <NextUIProvider>
-      {children}
-    </NextUIProvider>
-    </ContextMenuTrigger>
-        <ContextMenuContent>
-          <ContextMenuRadioGroup value="pedro">
-            <ContextMenuLabel inset>Join Hustler's Community</ContextMenuLabel>
-          </ContextMenuRadioGroup>
-          {/* <ContextMenuSeparator /> */}
-          <Separator className='bg-gray-500' />
-          <ContextMenuItem>Events</ContextMenuItem>
-          <ContextMenuItem>Tools</ContextMenuItem>
-          <ContextMenuItem>Resources</ContextMenuItem>
-        </ContextMenuContent>
-      </ContextMenu>
-    
-  )
+      <ContextMenuTrigger>
+        <NextUIProvider>
+          {children}
+        </NextUIProvider>
+      </ContextMenuTrigger>
+      <ContextMenuContent>
+        <ContextMenuRadioGroup value="pedro">
+          <ContextMenuLabel inset>Join Hustler&apos;s Community</ContextMenuLabel>
+        </ContextMenuRadioGroup>
+        {/* <ContextMenuSeparator /> */}
+        <Separator className='bg-gray-500' />
+        <ContextMenuItem>Events</ContextMenuItem>
+        <ContextMenuItem>Tools</ContextMenuItem>
+        <ContextMenuItem>Resources</ContextMenuItem>
+      </ContextMenuContent>
+    </ContextMenu>
+  );
 }
