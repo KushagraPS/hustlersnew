@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Image } from "next/image"; // Import Image component from next/image
 import { MdOutlineAlternateEmail, MdOutlineLocalPhone } from "react-icons/md";
 
 export default function Footer() {
@@ -9,7 +10,8 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-4 mb-8 lg:mb-0">
           {/* Logo */}
           <div className="mb-4 lg:mb-0">
-            <img src="https://pedalstart.com/startup/images/2021-05-logo.png" alt="Logo" className="h-10 w-auto" />
+            {/* Replace img element with Image component */}
+            <Image src="https://pedalstart.com/startup/images/2021-05-logo.png" alt="Logo" width={120} height={40} />
           </div>
           {/* About */}
           <div>
@@ -48,8 +50,6 @@ export default function Footer() {
             <li><Link href="/contact">Tools</Link></li> */}
           </ul>
         </div>
-       
-        
         <div className="flex flex-col gap-4">
           {/* Social Links */}
           <div className="flex gap-2">
