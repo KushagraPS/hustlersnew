@@ -33,9 +33,7 @@ export default function Welcome() {
      
     </div>
 
-    <span className="inline-block align-top">
-    <AnimatedTooltipPreview />
-  </span>
+   
 </p>
 
 
