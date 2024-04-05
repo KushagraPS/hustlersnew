@@ -1,10 +1,12 @@
 "use client";
+
 import React, { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Image, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { Logo } from "@/app/assets/Logo";
 import { Button } from "./ui/button";
+
 import {
   Drawer,
   DrawerClose,
@@ -30,7 +32,10 @@ export default function Header() {
     { label: "Home", path: "/", isActive: pathname === "/" },
     { label: "Events", path: "/events", isActive: pathname === "/events" },
     { label: "Tools", path: "/Tools", isActive: pathname === "/Tools" },
-    { label: "Resources", path: "/Resources", isActive: pathname === "/Resources" },
+   
+    
+
+
    
     // { label: "Venue", path: "/#venue", isActive: pathname === "/#venue" },
     // { label: "Contact", path: "/#Venue", isActive: pathname === "/#Venue" }
@@ -54,7 +59,7 @@ export default function Header() {
                 width={170}
                 disableSkeleton={false}
                 className="drop-shadow-xl pl-2" 
-                src={"https://join.pedalstart.com/src/2021/05/logo.png"} 
+                src={"https://i.ibb.co/mHDqLsc/Hustlers-Logo.png"} 
                 alt="" 
                 onLoad={handleImageLoad}
               />
@@ -78,74 +83,15 @@ export default function Header() {
       <NavbarContent justify="end" className="flex">
         {/* <NavbarItem>  */}
         
-        <Drawer>
-            <DrawerTrigger asChild>
-              {/* <Button variant="orange">Details</Button> */}
-              <Link href={"#"} className="text-sm sm:text-base font-bold">Contact</Link>
-            </DrawerTrigger>
-            <DrawerContent>
-              <div className="mx-auto w-full max-w-sm text-left">
-                <DrawerHeader>
-                  <DrawerTitle>Contact At</DrawerTitle>
-                  <Separator className="my-2" />
-                  <DrawerTitle>Faculty Co-ordinators</DrawerTitle>
-                  <DrawerDescription>Prof. Namrata Gohel: <Link href={"mailtonamrata.gohel@aitindia.in"}>namrata.gohel@aitindia.in</Link></DrawerDescription>
-                  <DrawerDescription>Prof. Prachi Patel: <Link href={"mailto:prachi.patel@aitindia.in"}>prachi.patel@aitindia.in</Link></DrawerDescription>
-                  <DrawerTitle>Students Co-ordinators</DrawerTitle>
-                  <DrawerDescription>Hetarth: <Link href={"tel:+91 9328563827"}> +91 9328563827 </Link></DrawerDescription>
-                  <DrawerDescription>Rachit: <Link href={"tel:+91 9723395968"}> +91 9723395968 </Link></DrawerDescription>
-                  <DrawerDescription>Pravin: <Link href={"tel:+91 9327622985"}> +91 9327622985 </Link></DrawerDescription>
-                  <DrawerDescription>Parth: <Link href={"tel:+91 9104454198"}> +91 9104454198 </Link></DrawerDescription>
+     
+      
+      <NavbarItem>
+  <Link href="/Forms">
+    <Button variant="primary" size="sm">Join Now!</Button>
+  </Link>
+</NavbarItem>
 
-                </DrawerHeader>
 
-                <DrawerFooter>
-                  {/* <Button>Submit</Button> */}
-                  <DrawerClose asChild>
-                    <Button variant="outline">Cancel</Button>
-                  </DrawerClose>
-                </DrawerFooter>
-              </div>
-            </DrawerContent>
-          </Drawer>
-        {/* <Button variant="ghost"></Button> */}
-      {/* </NavbarItem> */}
-        <NavbarItem>
-          <Drawer>
-            <DrawerTrigger asChild>
-              {/* <Button variant="orange">Details</Button> */}
-              <Button variant="primary" size={"sm"}>Register</Button>
-            </DrawerTrigger>
-            <DrawerContent>
-              <div className="mx-auto w-full max-w-sm text-left">
-                <DrawerHeader>
-                  <DrawerTitle>Registration</DrawerTitle>
-                  <Separator className="my-2"></Separator>
-                  <DrawerDescription>Note:</DrawerDescription>
-                  <DrawerDescription>You have to do fees payment after just filling up this Registration Form.</DrawerDescription>
-                  <DrawerDescription>Contact below mentioned Co-ordinators for Fees Payment.</DrawerDescription>
-                  <Separator className="my-2"></Separator>
-                  <DrawerTitle>Contact for Fees Payment</DrawerTitle>
-                  <DrawerDescription>Vaishnavi: <Link href={"tel:+91 6355384251"}> +91 6355384251 </Link></DrawerDescription>
-                  <DrawerDescription>Manmohan: <Link href={"tel:+91 7232010574"}> +91 7232010574 </Link></DrawerDescription>
-                </DrawerHeader>
-
-                <DrawerFooter>
-                  {/* <Button>Submit</Button> */}
-                  <Link 
-                  href={"https://forms.gle/B5VeJgrFPcyjWq7D8"} 
-                  target="_blank"
-                  className="mx-auto">
-                  <Button variant="primary" size={"sm"}>Register Now</Button>
-                  </Link>
-                  <DrawerClose asChild>
-                    <Button variant="outline">Cancel</Button>
-                  </DrawerClose>
-                </DrawerFooter>
-              </div>
-            </DrawerContent>
-          </Drawer>
-          </NavbarItem>
         
       </NavbarContent>
 

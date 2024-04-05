@@ -4,16 +4,18 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import React, { useState } from 'react';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hustlers | PedalStart ",
-  description: "Join us for an exciting techfest at Ahmedabad Institute of Technology! Explore a wide range of technical and non-technical events, including workshops, hackathons, guest lectures, and much more. Don't miss this opportunity to showcase your skills, learn from industry experts, and connect with like-minded individuals. Register now and be a part of the ultimate tech extravaganza!",
-  keywords: ['AIT', 'TECHFEST 2024', 'TECHNOSPARX', 'Ahmedabad'],
-  authors: [{ name: 'Krish Panchani', url: 'https://github.com/Krish-Panchani' }],
-  creator: 'Krish Panchani',
-  publisher: 'Krish Panchani',
+  description: "",
+  keywords: [''],
+  authors: [{ }],
+  creator: '',
+  publisher: '',
   formatDetection: {
     email: false,
     address: false,

@@ -1,126 +1,81 @@
-"use client"
-
-import Link from "next/link"
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer"
-import { Separator } from "./ui/separator"
-import { Button } from "./ui/button"
-import { FaGithub, FaInstagram, FaLinkedin, FaPhone, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineAlternateEmail, MdOutlineLocalPhone } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-2 sm:flex-row p-5 w-full shrink-0 items-center px-6 md:px-6 border-t mb-20 sm:mb-5 ">
-      <p className=" text-gray-500 dark:text-gray-400">© 2024 PEDALSTART | All rights reserved.</p>
-      <nav className="sm:ml-auto flex gap-2 sm:gap-2 sm:flex-row flex-row">
-        <h1>Design & Developed By{' '}
-        <Drawer>
-          <DrawerTrigger asChild>
-            {/* <Button variant="orange">Details</Button> */}
-            <Link className="font-extrabold hover:underline underline-offset-4 bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent" 
-            href="#">Kushagra Sharma</Link>
-          </DrawerTrigger>
-          <DrawerContent>
-            <div className="mx-auto w-full max-w-sm">
-              <DrawerHeader>
-                <DrawerTitle className="font-extrabold text-xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent">Krish Panchani&apos;s Handles</DrawerTitle>
-                <Separator className="my-2" />
-                <DrawerTitle>Contact</DrawerTitle>
-                <div className="flex items-center">
-                  <MdOutlineLocalPhone />
-                  <DrawerDescription className="px-2">Phone: <Link href={"tel:+91 8866799347"}> +91 8866799347 </Link></DrawerDescription>
-                </div>
-
-                <div className="flex items-center">
-                  <FaWhatsapp />
-                  <DrawerDescription className="px-2">WhatsApp: <Link href={"https://wa.me/+918866799347"} target="_blank"> +91 8866799347 </Link></DrawerDescription>
-                </div>
-
-                <div className="flex items-center">
-                  <MdOutlineAlternateEmail />
-                  <DrawerDescription className="px-2">Email: <Link href={"mailto:krishpanchani1346@gmail.com"} target="_blank"> krishpanchani1346@gmail.com </Link></DrawerDescription>
-                </div>
-
-                <Separator className="my-2" />
-                <DrawerTitle>Social</DrawerTitle>
-
-                <div className="flex items-center">
-                  <FaInstagram />
-                  <DrawerDescription className="px-2">Instagram: <Link href={"https://www.instagram.com/krishpanchani/"} target="_blank"> krishpanchani </Link></DrawerDescription>
-                </div>
-                <div className="flex items-center">
-                  <FaLinkedin />
-                  <DrawerDescription className="px-2">LinkedIn: <Link href={"https://www.linkedin.com/in/krish-panchani-7b3b3b1b3/"} target="_blank"> Krish Panchani </Link></DrawerDescription>
-                </div>
-                <div className="flex items-center">
-                  <FaGithub />
-                  <DrawerDescription className="px-2">GitHub: <Link href={"https://github.com/Krish-Panchani/"} target="_blank"> Krish-Panchani </Link></DrawerDescription>
-                </div>
-
-              </DrawerHeader>
-
-              <DrawerFooter>
-                {/* <Button>Submit</Button> */}
-                <DrawerClose asChild>
-                  <Button variant="outline">Cancel</Button>
-                </DrawerClose>
-              </DrawerFooter>
-            </div>
-          </DrawerContent>
-        </Drawer>
-        </h1>
+    <footer className="bg-gray-100 dark:bg-black">
+      <div className="container mx-auto px-6 py-12 flex flex-col lg:flex-row justify-between">
+        <div className="flex flex-col lg:flex-row gap-4 mb-8 lg:mb-0">
+          {/* Logo */}
+          <div className="mb-4 lg:mb-0">
+            <img src="https://pedalstart.com/startup/images/2021-05-logo.png" alt="Logo" className="h-10 w-auto" />
+          </div>
+          {/* About */}
+          <div>
+            <h2 className="text-lg font-bold mb-2">About SaaSHustlers</h2>
+            <p className="text-gray-600 dark:text-gray-400">Brief description about the company or website.</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 mb-8 lg:mb-0">
+          {/* Quick Links */}
+          <h2 className="text-lg font-bold mb-2">Quick Links</h2>
+          <ul className="text-gray-600 dark:text-gray-400">
+            <li><Link href="/about">Home</Link></li>
+            <li><Link href="/services">Events</Link></li>
+            <li><Link href="/portfolio">Resources</Link></li>
+            <li><Link href="/contact">Tools</Link></li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-4 mb-8 lg:mb-0">
+          {/* Quick Links */}
+          <h2 className="text-lg font-bold mb-2">Pages</h2>
+          <ul className="text-gray-600 dark:text-gray-400">
+            <li><Link href="/about">Terms & Conditions</Link></li>
+            <li><Link href="/services">Privacy & Policy</Link></li>
+            <li><Link href="/services">Guidelines</Link></li>
+            {/* <li><Link href="/portfolio">Resources</Link></li>
+            <li><Link href="/contact">Tools</Link></li> */}
+          </ul>
+        </div>
+        <div className="flex flex-col gap-4 mb-8 lg:mb-0">
+          {/* Quick Links */}
+          <h2 className="text-lg font-bold mb-2">Events</h2>
+          <ul className="text-gray-600 dark:text-gray-400">
+            <li><Link href="/about">Online</Link></li>
+            <li><Link href="/services">Offline</Link></li>
+            {/* <li><Link href="/portfolio">Resources</Link></li>
+            <li><Link href="/contact">Tools</Link></li> */}
+          </ul>
+        </div>
        
-        <Drawer>
         
-          <DrawerContent>
-            <div className="mx-auto w-full max-w-sm">
-              <DrawerHeader>
-                <DrawerTitle className="font-extrabold text-xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent">Meet Katarmal&apos;s Handles</DrawerTitle>
-                <Separator className="my-2" />
-                <DrawerTitle>Contact</DrawerTitle>
-                <div className="flex items-center">
-                  <MdOutlineLocalPhone />
-                  <DrawerDescription className="px-2">Phone: <Link href={"tel:+91 8866799347"}> +91 9137674983 </Link></DrawerDescription>
-                </div>
-
-                <div className="flex items-center">
-                  <FaWhatsapp />
-                  <DrawerDescription className="px-2">WhatsApp: <Link href={"https://wa.me/+918866799347"} target="_blank"> +91 9137674983 </Link></DrawerDescription>
-                </div>
-
-                <div className="flex items-center">
-                  <MdOutlineAlternateEmail />
-                  <DrawerDescription className="px-2">Email: <Link href={"mailto:krishpanchani1346@gmail.com"} target="_blank"> katarmalmeet851@gmail.com </Link></DrawerDescription>
-                </div>
-
-                <Separator className="my-2" />
-                <DrawerTitle>Social</DrawerTitle>
-
-                <div className="flex items-center">
-                  <FaInstagram />
-                  <DrawerDescription className="px-2">Instagram: <Link href={"https://www.instagram.com/meet_katarmal?utm_source=qr&igsh=MTA5Z3pndm41a3AzaA=="} target="_blank"> Meet Katarmal </Link></DrawerDescription>
-                </div>
-                <div className="flex items-center">
-                  <FaLinkedin />
-                  <DrawerDescription className="px-2">LinkedIn: <Link href={"https://www.linkedin.com/in/meet-katarmal-118796256/"} target="_blank"> Meet Katarmal </Link></DrawerDescription>
-                </div>
-                <div className="flex items-center">
-                  <FaGithub />
-                  <DrawerDescription className="px-2">GitHub: <Link href={"https://github.com/katarmalmeet"} target="_blank"> Meet Katarmal </Link></DrawerDescription>
-                </div>
-
-              </DrawerHeader>
-
-              <DrawerFooter>
-                {/* <Button>Submit</Button> */}
-                <DrawerClose asChild>
-                  <Button variant="outline">Cancel</Button>
-                </DrawerClose>
-              </DrawerFooter>
-            </div>
-          </DrawerContent>
-        </Drawer>
-            
-      </nav>
+        <div className="flex flex-col gap-4">
+          {/* Social Links */}
+          <div className="flex gap-2">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+              <FaGithub />
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+              <FaWhatsapp />
+            </a>
+          </div>
+          {/* Events */}
+         
+        </div>
+      </div>
+      {/* Copyright */}
+      <div className="bg-gray-200 dark:bg-gray-900 py-4">
+        <div className="container mx-auto text-center text-gray-600 dark:text-gray-400">
+          <p>&copy; 2024 SaaSHustlers. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-  )
+  );
 }
